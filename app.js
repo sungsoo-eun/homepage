@@ -1,7 +1,6 @@
 // http 모듈은 node.js에서 기본으로 제공하는 모듈이므로 설치가 필요 없음.
 const http = require('http');
 
-const hostname = '127.0.0.1';
 const port = process.env.PORT || 3000;
 
 // 서버가 실행된 후의 동작을 Callback Function으로 등록
@@ -16,6 +15,6 @@ const server = http.createServer((req, res) => {
     res.end('World!!\n');
 });
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(port, () => {
+    console.log(`Server running at ${port}`);
 });
