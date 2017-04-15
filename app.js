@@ -2,7 +2,7 @@
 const http = require('http');
 
 const hostname = '127.0.0.1';
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // 서버가 실행된 후의 동작을 Callback Function으로 등록
 // req : 요청 객체
